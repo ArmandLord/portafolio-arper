@@ -72,11 +72,7 @@ export function Navbar() {
                     {item.name}
                   </span>
                   {item.isActive && (
-                    <motion.div
-                      layoutId="navbar-indicator"
-                      className="absolute inset-0 bg-primary/10 rounded-lg -z-10"
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                    />
+                    <div className="hidden md:block absolute inset-0 bg-primary/10 rounded-lg -z-10" />
                   )}
                   {!item.isActive && (
                     <span className="absolute inset-0 bg-white/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity -z-10" />

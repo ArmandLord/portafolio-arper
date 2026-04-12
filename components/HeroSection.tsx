@@ -46,7 +46,7 @@ export function HeroSection() {
             variants={container}
             initial="hidden"
             animate="show"
-            className="text-left"
+            className="text-left hidden md:block"
           >
             <motion.div variants={item} className="mb-4">
               <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20">
@@ -91,6 +91,46 @@ export function HeroSection() {
               </Link>
             </motion.div>
           </motion.div>
+
+          {/* Mobile version - without animations */}
+          <div className="text-left md:hidden">
+            <div className="mb-4">
+              <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20">
+                <Sparkles className="w-3 h-3" />
+                Disponible para nuevos proyectos
+              </span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4 tracking-tight">
+              <span className="text-foreground">Hola, soy </span>
+              <br />
+              <span className="text-gradient">Armando Pérez</span>
+            </h1>
+
+            <div className="text-lg sm:text-xl font-medium mb-6">
+              <span className="text-muted-foreground">{personalInfo.title}</span>
+            </div>
+
+            <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-lg leading-relaxed">
+              {personalInfo.bio}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/projects"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 font-medium text-background bg-primary rounded-lg hover:bg-primary/90 transition-all hover:scale-105"
+              >
+                <ArrowRight className="w-4 h-4" />
+                Ver Proyectos
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 font-medium text-foreground border border-white/20 rounded-lg hover:bg-white/5 transition-all hover:scale-105"
+              >
+                Contactar
+              </Link>
+            </div>
+          </div>
 
           <motion.div
             variants={floatVariant}
