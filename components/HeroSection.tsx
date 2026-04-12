@@ -36,8 +36,8 @@ export function HeroSection() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-[128px] max-md:w-64 max-md:h-64 max-md:-left-10 max-md:-top-10" />
         <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-accent/20 rounded-full blur-[128px] max-md:w-64 max-md:h-64 max-md:-right-10 max-md:bottom-0" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-chart-2/10 rounded-full blur-[160px]" />
-        <div className="absolute inset-0 grid-pattern opacity-30" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-chart-2/10 rounded-full blur-[160px] hidden lg:block" />
+        <div className="absolute inset-0 grid-pattern opacity-30 hidden lg:block" />
       </div>
 
       <div className="max-w-6xl mx-auto px-6 lg:px-8 w-full relative z-10 py-20">
