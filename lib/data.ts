@@ -3,7 +3,8 @@ export const personalInfo = {
   title: "Frontend Developer",
   email: "armandlord98@gmail.com",
   location: "Valle de Chalco, México",
-  bio: "Desarrollador Full Stack apasionado por crear experiencias de usuario intuitivas y accesibles. Transformo diseños en interfaces que conectan con las personas.",
+  bio: "Desarrollador Frontend con más de 5 años transformando ideas en productos digitales. He trabajado con startups y empresas internacionales creando interfaces atractivas y funcionales para todos. Mi pasión: código limpio, experiencias accesibles y siempre aprender algo nuevo. Cuando no programo, estoy explorando tecnologías o compartiendo conocimiento con la comunidad.",
+  aboutImage: "/images/about/about.jpg",
   github: "https://github.com/ArmandLord",
   linkedin: "https://www.linkedin.com/in/jos%C3%A9-armando-p%C3%A9rez/",
 };

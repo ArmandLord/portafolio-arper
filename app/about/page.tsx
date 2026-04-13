@@ -42,22 +42,47 @@ const skillLogos: { node: IconElement; title: string; href: string }[] = skills.
 export default function AboutPage() {
   return (
     <div className="pt-20">
-      <section className="py-24 bg-gradient-to-b from-background to-surface">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Sobre Mí</h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            {personalInfo.bio}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
-            <p>📍 {personalInfo.location}</p>
-            <p>✉️ {personalInfo.email}</p>
-          </div>
-        </motion.div>
+      <section className="min-h-[85vh] flex items-center bg-gradient-to-b from-background via-background to-surface">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="grid grid-cols-1 lg:grid-cols-11 gap-10 lg:gap-16 items-center"
+          >
+            <div className="lg:col-span-5 order-2 lg:order-1">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Hola, soy <span className="text-primary">{personalInfo.name}</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed">
+                {personalInfo.bio}
+              </p>
+              <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
+                <p className="flex items-center gap-2">
+                  <span className="text-base">📍</span> {personalInfo.location}
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="text-base">✉️</span> {personalInfo.email}
+                </p>
+              </div>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="lg:col-span-6 order-1 lg:order-2"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10" />
+                <img
+                  src={personalInfo.aboutImage}
+                  alt={personalInfo.name}
+                  className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
       </section>
 
       <section className="py-24">
