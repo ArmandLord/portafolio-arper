@@ -66,7 +66,7 @@ export const projects = [
       "Plataforma digital para crear invitaciones de bodas elegantes. Los usuarios pueden gestionar confirmaciones, invitados y mensajes desde un dashboard intuitivo.",
     tech: ["React", "TypeScript", "Next.js", "Tailwind", "Full Stack"],
     url: "https://www.hitos.com.mx/",
-    image: "/projects/hitos.png",
+    image: "/images/proyects/hitos.png",
   },
   {
     id: "neighborhood-finance",
@@ -75,7 +75,7 @@ export const projects = [
       "Sistema de gestión financiera comunitaria para llevar registro de ingresos y gastos, agendar eventos y establecer metas financieras.",
     tech: ["React", "TypeScript", "Next.js", "Full Stack"],
     url: "https://neighborhood-finance.vercel.app/",
-    image: "/projects/neighborhood-finance.png",
+    image: "/images/proyects/neighbordhood.png",
   },
   {
     id: "sinteticos-de-mexico",
@@ -84,7 +84,7 @@ export const projects = [
       "E-commerce para empresa dedicada a la venta de unicel y geles refrigerantes. Catálogo de productos y sistema de pedidos.",
     tech: ["React", "TypeScript", "Next.js", "E-commerce"],
     url: "https://sinteticos-de-mexico.vercel.app/",
-    image: "/projects/sinteticos.png",
+    image: "/images/proyects/sinteticos.png",
   },
 ];
 

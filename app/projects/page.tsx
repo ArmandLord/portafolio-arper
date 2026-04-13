@@ -27,8 +27,12 @@ export default function ProjectsPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-background rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="h-48 bg-muted flex items-center justify-center">
-                  <span className="text-4xl">💼</span>
+                <div className="h-48 bg-muted flex items-center justify-center overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
