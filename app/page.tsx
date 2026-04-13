@@ -40,7 +40,8 @@ export default function Home() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         </div>
         
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        {/* Desktop - with animations */}
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 hidden md:block">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -100,6 +101,66 @@ export default function Home() {
               </motion.div>
             ))}
           </motion.div>
+
+          <div className="mt-10">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              Ver todos los proyectos
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Mobile - without animations */}
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 md:hidden">
+          <div className="mb-12 lg:mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-3 text-foreground">Proyectos</h2>
+            <p className="text-muted-foreground">Alguns proyectos que he desarrollado</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <div
+                key={project.id}
+                className={`group relative p-6 rounded-xl border transition-all duration-300 hover:scale-[1.02] ${projectColors[index % 3]}`}
+              >
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                <div className="relative">
+                  <h3 className="text-lg font-semibold mb-2 text-foreground group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm mb-4 leading-relaxed text-muted-foreground">
+                    {project.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.slice(0, 4).map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-xs font-medium px-2 py-1 rounded-md bg-white/5 text-muted-foreground"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:gap-2 transition-all"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    Visitar
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
 
           <div className="mt-10">
             <Link
