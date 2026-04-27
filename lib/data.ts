@@ -19,6 +19,14 @@ export const experience = [
       "Desarrollo de interfaces y features complejas usando React, TypeScript, Next.js, Tailwind y MCP. Colaboración con equipos internacionales (producto, diseño e ingeniería).",
   },
   {
+    company: "CrediTú",
+    role: "Desarrollador de Software",
+    period: "Feb 2022 - Mar 2023",
+    location: "Remoto (Chile)",
+    description:
+      "Desarrollo de funcionalidades escalables en un ecosistema empresarial usando: NestJS, Vue, TypeScript, Jest, Cypress, Buefy, Oruga, Figma, AWS y Storybook.",
+  },
+  {
     company: "Desafío Latam",
     role: "Tutor",
     period: "May 2023 - Oct 2023",
@@ -40,14 +48,6 @@ export const experience = [
     location: "Remoto",
     description:
       "Tutor principal para cursos de Frontend con React, Firebase y Vue.",
-  },
-  {
-    company: "CrediTú",
-    role: "Desarrollador de Software",
-    period: "Feb 2022 - Mar 2023",
-    location: "Remoto (Chile)",
-    description:
-      "Desarrollo de funcionalidades escalables en un ecosistema empresarial usando: NestJS, Vue, TypeScript, Jest, Cypress, Buefy, Oruga, Figma, AWS y Storybook.",
   },
   {
     company: "Desafío Latam",
