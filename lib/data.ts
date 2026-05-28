@@ -87,6 +87,15 @@ export const projects = [
     url: "https://sinteticos-de-mexico.vercel.app/",
     image: "/images/proyects/sinteticos.png",
   },
+  {
+    id: "gods",
+    title: "GOD'S",
+    description:
+      "E-commerce para venta de productos comestibles y bebidas de uso recreacional. Catálogo de productos con animaciones y efectos visuales.",
+    tech: ["React", "TypeScript", "Next.js", "E-commerce", "GSAP"],
+    url: "https://gods-one.vercel.app/",
+    image: "/images/proyects/gods.png",
+  },
 ];
 
 export const skills = [
